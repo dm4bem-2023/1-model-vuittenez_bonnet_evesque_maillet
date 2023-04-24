@@ -2,5 +2,28 @@
 
 
 # Hypothesis
-1) Les murs exterieur sont supposées adiabitiques
-2) 
+1) Les murs exterieurs sont supposées adiabitiques
+2) Les temperature sont uniformes sur chaque surface d'un mur
+3) Transfert de chaleur unidirectionnels
+4) Les transfert via le plafond et le sol sont négligés
+
+# Les murs 
+
+
+concrete = {'Conductivity': 1.400,
+            'Density': 2300.0,
+            'Specific heat': 880,
+            'Width': 0.2}
+
+insulation = {'Conductivity': 0.040,
+              'Density': 16.0,
+              'Specific heat': 1210,
+              'Width': 0.08}
+
+wall = pd.DataFrame.from_dict({'Layer_1': concrete,
+                               'Layer_2': insulation},
+                              orient='index')
+wall
+
+| materiaux | capacité thermique (W/m/K)| masse volumique (kg/m^3) | h (W/m²/k) |
+|
